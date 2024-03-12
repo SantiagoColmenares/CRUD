@@ -41,3 +41,22 @@ def eliminar(request, id):
   return HttpResponse("Se elimino")
 
 
+def consultas(request):
+  posts = Post.objects.all()
+  filtro = Post.objects.filter(titulo='Santiago')
+  post = Post.objects.get(id=40)
+  limite = Post.objects.all()[:20]
+  limite2 = Post.objects.all()[14:19]
+  orden = Post.objects.all().order_by('-cuerpo')
+  menor = Post.objects.filter(id__lt = 20)
+  return render(request, 'index.html', {
+    'posts':posts,
+    'filtro':filtro,
+    'post':post,
+    'limite':limite2,
+    'orden':orden,
+    'menor':menor
+  })
+  #return HttpResponse("Consultas")
+
+

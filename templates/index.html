@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Listar todos los post {{ posts|length }}</h1>
+{% comment %}   <ul>
+    {% for post in posts  %}
+    <li>{{ post.titulo }}</li>
+    {% endfor %}
+  </ul>  {% endcomment %}
+
+{% comment %}   <ul>
+    {% for post in filtro  %}
+    <li>{{ post.titulo }}</li>
+    {% endfor %}
+  </ul> {% endcomment %}
+
+<hr>
+
+{{post.fecha}} - {{post.titulo}}
+
+<hr>
+  <h1>Listar todos los post {{ limite|length }}</h1>
+<ul>
+    {% for post in limite  %}
+    <li>{{ post.id }}</li>
+    {% endfor %}
+</ul>
+<hr>
+  <h1>Listar todos los post {{ orden|length }}</h1>
+<ul>
+    {% for post in orden  %}
+    <li>{{ post.cuerpo }}</li>
+    {% endfor %}
+</ul>
+<hr>
+  <h1>Listar todos los post menor a 20 {{ menor|length }}</h1>
+<ul>
+    {% for post in menor  %}
+    <li>{{ post.id }}</li>
+    {% endfor %}
+</ul>
+
+
+
+</body>
+
+</html>

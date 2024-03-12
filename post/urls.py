@@ -7,5 +7,6 @@ urlpatterns = [
     path('consultar/<int:id>', views.consultar, name="consultar"),
     path('modificar/<int:id>/<str:titulo>', views.modificar, name="modificar"),
     path('eliminar/<int:id>', views.eliminar, name='eliminar'),
-    path('storageA/<str:nombre_A>/<str:correo>/', views.storageA, name="storageA")
+    path('storageA/<str:nombre_A>/<str:correo>/', views.storageA, name="storageA"),
+    path('consultas/', views.consultas, name="consultas")
 ]
